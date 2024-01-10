@@ -1,0 +1,55 @@
+--added package.json file
+npm init -y
+
+--install tailwind with -D(dev dependency)
+npm install -D tailwindcss
+
+--create a config for tailwind
+npx tailwindcss init
+
+--If src folder available
+npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+Or create scope in scripts in package.json
+  "scripts": {
+    "build": "tailwindcss -i ./input.css -o ./css/style.css",
+    "watch": "tailwindcss -i ./input.css -o ./css/style.css --watch"
+  },
+  build for once watch for keep compiling.
+
+--to run the project
+npm run build
+--to continuous watch run
+npm run watch
+
+
+----for webpack
+Create your package.json
+npm init -y
+
+Install Tailwind
+npm install -D tailwindcss
+
+Install Webpack & Loaders
+npm i -D webpack webpack-cli webpack-dev-server style-loader css-loader postcss postcss-loader postcss-preset-env
+
+Create a folder called src and add an empty index.js file.
+Create webpack.config.js in the root
+In package.json create a "build" in scripts scope
+"scripts": {
+    "build": "webpack"
+  },
+  ## add "dev":"webpack serve" continuous change to see in index.js to bundle.js
+npm run dev
+
+npx tailwindcss init
+Tailwind Config File
+PostCSS Config File
+complete webpack.config.js by adding module scope
+create a style.css in src folder
+npm run build
+
+
+If Needed
+https://gist.github.com/bradtraversy/1c93938c1fe4f10d1e5b0532ae22e16a#install-tailwind
+
+----
